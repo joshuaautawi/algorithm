@@ -1,13 +1,13 @@
 package main
 
 import (
-	"algorithm/search"
+	"algorithm/sort"
 	"fmt"
 )
 
 func main() {
-	// arr := []int{1, 2, 3, 4, 5, 6}
-	arr1 := []int{0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1}
-	res := search.TwoCrystalBall(arr1)
+	arr := []int{2, 1, 3, 7, 5, 6}
+	// arr1 := []int{0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1}
+	res := sort.BubbleSort(arr)
 	fmt.Println(res)
 }
