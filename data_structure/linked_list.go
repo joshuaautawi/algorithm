@@ -21,7 +21,6 @@ func LL() {
 	link.append(&node3)
 	link.prepend(&node4)
 	link.Print()
-
 }
 
 func (l *LinkedList) append(newNode *Node) {
@@ -39,6 +38,7 @@ func (l *LinkedList) prepend(newNode *Node) {
 }
 
 func (l *LinkedList) Print() {
+	fmt.Println("Start Function ")
 	node := l.Head
 	for node.Next != nil {
 		fmt.Println(node.Data)
