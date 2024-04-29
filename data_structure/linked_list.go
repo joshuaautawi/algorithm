@@ -9,6 +9,7 @@ type Node struct {
 
 type LinkedList struct {
 	Head *Node
+	size int
 }
 
 func LL() {
@@ -16,11 +17,12 @@ func LL() {
 	node2 := Node{Data: 2, Next: nil}
 	node3 := Node{Data: 3, Next: nil}
 	node4 := Node{Data: 4, Next: nil}
-	link := LinkedList{Head: &node1}
+	link := LinkedList{Head: &node1, size: 1}
 	link.append(&node2)
 	link.append(&node3)
 	link.prepend(&node4)
 	link.Print()
+	fmt.Println(link.size)
 }
 
 func (l *LinkedList) append(newNode *Node) {
@@ -29,12 +31,18 @@ func (l *LinkedList) append(newNode *Node) {
 		node = node.Next
 	}
 	node.Next = newNode
+	l.size += 1
 }
 
 func (l *LinkedList) prepend(newNode *Node) {
 	node := l.Head
 	l.Head = newNode
 	l.Head.Next = node
+	l.size += 1
+}
+
+func (l *LinkedList) length() int {
+	return l.size
 }
 
 func (l *LinkedList) Print() {

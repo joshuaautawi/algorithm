@@ -10,4 +10,5 @@ func main() {
 	// res := sort.BubbleSort(arr)
 	// fmt.Println(res)
 	datastructure.LL()
+	datastructure.Run()
 }
